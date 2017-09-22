@@ -21,7 +21,8 @@ namespace Powerline
         private void Form1_Load(object sender, EventArgs e)
         {
             //CGlobal.CurPath = Directory.GetCurrentDirectory();
-            CGlobal.CurPath = @"E:\DeepLearningEnv\caffe-master";
+            CGlobal.CaffePath = @"E:\DeepLearningEnv\caffe-master";
+            CGlobal.CurPath = CGlobal.CaffePath;
             txtCurDir.Text = CGlobal.CurPath;
         }
 
@@ -36,7 +37,12 @@ namespace Powerline
 
         private void btnClassification_Click(object sender, EventArgs e)
         {
-
+            frmClassification frmcf = new frmClassification();
+            this.Hide();
+            frmcf.ShowDialog();
+            frmcf.Dispose();
+            this.Show();
+            this.txtCurDir.Text = CGlobal.CurPath;
         }
     }
 }

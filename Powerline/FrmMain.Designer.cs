@@ -41,9 +41,9 @@
             this.lblCurDir.AutoSize = true;
             this.lblCurDir.Location = new System.Drawing.Point(12, 9);
             this.lblCurDir.Name = "lblCurDir";
-            this.lblCurDir.Size = new System.Drawing.Size(112, 15);
+            this.lblCurDir.Size = new System.Drawing.Size(227, 15);
             this.lblCurDir.TabIndex = 0;
-            this.lblCurDir.Text = "当前工作目录：";
+            this.lblCurDir.Text = "当前工作目录（Caffe根目录）：";
             // 
             // txtCurDir
             // 
@@ -61,7 +61,7 @@
             this.btnChangeDir.Name = "btnChangeDir";
             this.btnChangeDir.Size = new System.Drawing.Size(258, 23);
             this.btnChangeDir.TabIndex = 2;
-            this.btnChangeDir.Text = "更换工作目录";
+            this.btnChangeDir.Text = "更换工作目录...";
             this.btnChangeDir.UseVisualStyleBackColor = true;
             this.btnChangeDir.Click += new System.EventHandler(this.btnChangeDir_Click);
             // 
