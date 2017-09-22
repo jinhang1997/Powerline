@@ -1,6 +1,6 @@
 ﻿namespace Powerline
 {
-    partial class FrmMain
+    partial class frmMain
     {
         /// <summary>
         /// 必需的设计器变量。

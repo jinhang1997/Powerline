@@ -88,36 +88,12 @@ namespace Powerline
 
         private void btnStart_Click(object sender, EventArgs e)
         {
-            Process proClassification = new Process();
             string strArgu;
-            string strError, strOutput;
-            strArgu =string.Format(@"""{0}"" ""{1}"" ""{2}"" ""{3}"" ""{4}""",
+            strArgu = string.Format(@"""{0}"" ""{1}"" ""{2}"" ""{3}"" ""{4}""",
                 txtPrototxtPath.Text, txtCaffemodelPath.Text, txtBinaryprotoPath.Text,
                 txtLabelsPath.Text, txtImgPath.Text);
-            if (MessageBox.Show(string.Format("Argus:\r\n{0}", strArgu)) == DialogResult.No)
-            {
-                return;
-            }
-            proClassification.StartInfo.FileName = txtToolPath.Text;
-            proClassification.StartInfo.Arguments = strArgu;
-            proClassification.StartInfo.UseShellExecute = false;
-            proClassification.StartInfo.CreateNoWindow = true;
-            proClassification.StartInfo.RedirectStandardInput = true;
-            proClassification.StartInfo.RedirectStandardOutput = true;
-            proClassification.StartInfo.RedirectStandardError = true;
-            try
-            {
-                proClassification.Start();
-                while (!proClassification.HasExited) ;
-                strOutput = proClassification.StandardOutput.ReadToEnd();
-                strError = proClassification.StandardError.ReadToEnd();
-                MessageBox.Show(string.Format("StandardOutput:\r\n{0}", strOutput));
-                MessageBox.Show(string.Format("StandardError:\r\n{0}", strError));
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.ToString());
-            }
+            frmRunClassification frmRun = new frmRunClassification(txtToolPath.Text, strArgu);
+            frmRun.ShowDialog();
         }
     }
 }

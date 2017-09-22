@@ -263,7 +263,7 @@
             this.btnStart.Name = "btnStart";
             this.btnStart.Size = new System.Drawing.Size(370, 78);
             this.btnStart.TabIndex = 24;
-            this.btnStart.Text = "分类测试";
+            this.btnStart.Text = "测试";
             this.btnStart.UseVisualStyleBackColor = true;
             this.btnStart.Click += new System.EventHandler(this.btnStart_Click);
             // 

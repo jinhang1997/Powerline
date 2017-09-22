@@ -11,9 +11,9 @@ using System.IO;
 
 namespace Powerline
 {
-    public partial class FrmMain : Form
+    public partial class frmMain : Form
     {
-        public FrmMain()
+        public frmMain()
         {
             InitializeComponent();
         }
@@ -21,13 +21,14 @@ namespace Powerline
         private void Form1_Load(object sender, EventArgs e)
         {
             //CGlobal.CurPath = Directory.GetCurrentDirectory();
-            CGlobal.CaffePath = @"E:\DeepLearningEnv\caffe-master";
+            CGlobal.CaffePath = @"E:\DeepLearningEnv\caffe-master\examples\powerline\class";
             CGlobal.CurPath = CGlobal.CaffePath;
             txtCurDir.Text = CGlobal.CurPath;
         }
 
         private void btnChangeDir_Click(object sender, EventArgs e)
         {
+            fbdCurDir.SelectedPath = CGlobal.CurPath;
             if (fbdCurDir.ShowDialog() == DialogResult.OK)
             {
                 txtCurDir.Text = fbdCurDir.SelectedPath;
