@@ -31,7 +31,6 @@
             this.lblTool = new System.Windows.Forms.Label();
             this.txtToolPath = new System.Windows.Forms.TextBox();
             this.btnChangeToolPath = new System.Windows.Forms.Button();
-            this.btnTrain = new System.Windows.Forms.Button();
             this.fbdCurDir = new System.Windows.Forms.FolderBrowserDialog();
             this.btnClassification = new System.Windows.Forms.Button();
             this.lblExample = new System.Windows.Forms.Label();
@@ -72,20 +71,11 @@
             this.btnChangeToolPath.UseVisualStyleBackColor = true;
             this.btnChangeToolPath.Click += new System.EventHandler(this.btnChangeDir_Click);
             // 
-            // btnTrain
-            // 
-            this.btnTrain.Location = new System.Drawing.Point(6, 24);
-            this.btnTrain.Name = "btnTrain";
-            this.btnTrain.Size = new System.Drawing.Size(352, 23);
-            this.btnTrain.TabIndex = 3;
-            this.btnTrain.Text = "训练（Training）界面";
-            this.btnTrain.UseVisualStyleBackColor = true;
-            // 
             // btnClassification
             // 
-            this.btnClassification.Location = new System.Drawing.Point(403, 24);
+            this.btnClassification.Location = new System.Drawing.Point(6, 24);
             this.btnClassification.Name = "btnClassification";
-            this.btnClassification.Size = new System.Drawing.Size(352, 23);
+            this.btnClassification.Size = new System.Drawing.Size(749, 23);
             this.btnClassification.TabIndex = 4;
             this.btnClassification.Text = "分类（Classification）界面";
             this.btnClassification.UseVisualStyleBackColor = true;
@@ -137,7 +127,6 @@
             // 
             // grpSelectEnter
             // 
-            this.grpSelectEnter.Controls.Add(this.btnTrain);
             this.grpSelectEnter.Controls.Add(this.btnClassification);
             this.grpSelectEnter.Location = new System.Drawing.Point(9, 234);
             this.grpSelectEnter.Name = "grpSelectEnter";
@@ -169,7 +158,6 @@
         private System.Windows.Forms.Label lblTool;
         private System.Windows.Forms.TextBox txtToolPath;
         private System.Windows.Forms.Button btnChangeToolPath;
-        private System.Windows.Forms.Button btnTrain;
         private System.Windows.Forms.FolderBrowserDialog fbdCurDir;
         private System.Windows.Forms.Button btnClassification;
         private System.Windows.Forms.Label lblExample;
