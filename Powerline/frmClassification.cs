@@ -20,12 +20,13 @@ namespace Powerline
 
         private void frmClassification_Load(object sender, EventArgs e)
         {
-            txtCurDir.Text = CGlobal.CurPath;
-            ofdFile.InitialDirectory = CGlobal.CurPath;
+            txtCurDir.Text = CGlobal.ToolPath;
+            //ofdFile.InitialDirectory = CGlobal.CurPath;
         }
 
         private void btnSelTool_Click(object sender, EventArgs e)
         {
+            ofdFile.InitialDirectory = CGlobal.ToolPath;
             ofdFile.Filter = "分类程序|Classification.exe";
             ofdFile.FileName = "";
             if (ofdFile.ShowDialog() == DialogResult.OK)
@@ -36,6 +37,7 @@ namespace Powerline
 
         private void btnSelectPrototxt_Click(object sender, EventArgs e)
         {
+            ofdFile.InitialDirectory = CGlobal.ExamplePath;
             ofdFile.Filter = "模型描述文件|*.prototxt";
             ofdFile.FileName = "";
             if (ofdFile.ShowDialog() == DialogResult.OK)
@@ -46,6 +48,7 @@ namespace Powerline
 
         private void btnSelectCaffemodel_Click(object sender, EventArgs e)
         {
+            ofdFile.InitialDirectory = CGlobal.ExamplePath;
             ofdFile.Filter = "模型均值文件|*.caffemodel";
             ofdFile.FileName = "";
             if (ofdFile.ShowDialog() == DialogResult.OK)
@@ -56,6 +59,7 @@ namespace Powerline
 
         private void btnSelectBinaryproto_Click(object sender, EventArgs e)
         {
+            ofdFile.InitialDirectory = CGlobal.ExamplePath;
             ofdFile.Filter = "图像均值文件|*.binaryproto";
             ofdFile.FileName = "";
             if (ofdFile.ShowDialog() == DialogResult.OK)
@@ -66,6 +70,7 @@ namespace Powerline
 
         private void btnSelectLabels_Click(object sender, EventArgs e)
         {
+            ofdFile.InitialDirectory = CGlobal.ExamplePath;
             ofdFile.Filter = "图像均值文件|*.txt";
             ofdFile.FileName = "";
             if (ofdFile.ShowDialog() == DialogResult.OK)
@@ -76,6 +81,7 @@ namespace Powerline
 
         private void btnSelectImg_Click(object sender, EventArgs e)
         {
+            ofdFile.InitialDirectory = CGlobal.ExamplePath;
             ofdFile.Filter = "待分类图像|*.jpg";
             ofdFile.FileName = "";
             if (ofdFile.ShowDialog() == DialogResult.OK)

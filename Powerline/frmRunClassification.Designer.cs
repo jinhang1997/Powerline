@@ -152,6 +152,7 @@
             this.txtResult.ReadOnly = true;
             this.txtResult.Size = new System.Drawing.Size(755, 96);
             this.txtResult.TabIndex = 11;
+            this.txtResult.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // frmRunClassification
             // 

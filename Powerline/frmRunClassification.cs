@@ -57,6 +57,7 @@ namespace Powerline
             {
                 lblMsg.Text = "异常退出";
                 MessageBox.Show(ex.ToString());
+                txtResult.Text = "运行错误";
                 return;
             }
             lblMsg.Text = "执行完毕";
@@ -83,7 +84,7 @@ namespace Powerline
             }
             else
             {
-                txtResult.Text = "识别有误";
+                txtResult.Text = "运行错误";
             }
         }
     }

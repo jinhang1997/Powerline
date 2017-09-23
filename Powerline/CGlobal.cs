@@ -8,8 +8,8 @@ namespace Powerline
 {
     static class CGlobal
     {
-        static public string CurPath { set; get; }
+        static public string ToolPath { set; get; }
 
-        static public string CaffePath { get; set; }
+        static public string ExamplePath { get; set; }
     }
 }
